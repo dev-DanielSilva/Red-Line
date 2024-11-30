@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Login from './screens/login';
+import Principal from './screens/principal';
+import Detalhes from './screens/detalhes';
+import { Button, Icon } from 'react-native-elements';
+import { icon } from 'react-native-vector-icons/FontAwesome';
 
-export default function App() {
+const Stack = createStackNavigator();
+function MyStack() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={Login}></Stack.Screen>
+      <Stack.Screen
+        name="Principal"
+        component={Principal}
+        options={{
+          headerBackTitle: 'Principal',
+          headerBackTitleStyle: { fontSize: 16 },
+        }}
+      />
+      <Stack.Screen name="Detalhes" component={Detalhes}
+      />
+    </Stack.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyStack></MyStack>
+    </NavigationContainer>
+  )
+}

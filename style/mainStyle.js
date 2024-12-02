@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
   },
+  accountText: {
+    paddingTop: 10,
+    color: 'red'
+  }
   });
 
   export default styles;

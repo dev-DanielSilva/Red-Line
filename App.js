@@ -5,14 +5,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import Login from './screens/login';
 import Principal from './screens/principal';
 import Detalhes from './screens/detalhes';
-import { Button, Icon } from 'react-native-elements';
-import { icon } from 'react-native-vector-icons/FontAwesome';
+import Cadastro from './screens/cadastro';
 
 const Stack = createStackNavigator();
 function MyStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen name="Login" component={Login}></Stack.Screen>
+      <Stack.Screen name="Cadastro" component={Cadastro}></Stack.Screen>
       <Stack.Screen
         name="Principal"
         component={Principal}

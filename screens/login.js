@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { Button, ButtonGroup, Icon, Input, Text } from 'react-native-elements';
 import { icon } from 'react-native-vector-icons/FontAwesome';
 import styles from '../style/mainStyle';
@@ -9,6 +9,12 @@ export default function Login({ navigation }) {
     navigation.reset({
       index: 0,
       routes: [{ name: "Principal" }]
+    })
+  }
+  const cadastro = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: "Cadastro" }]
     })
   }
   return (
@@ -41,14 +47,22 @@ export default function Login({ navigation }) {
         icon={
           <Icon
             name="check"
+            type='font-awesome'
             size={20}
             color="white"
+            style={{paddingRight: 5}}
           />
         }
         title="Entrar"
         onPress={() => entrar()}
         buttonStyle={styles.buttonStyle}
       />
+      <TouchableOpacity
+        onPress={cadastro}
+      >
+        <Text style={styles.accountText}
+        >Não possui conta?</Text>
+      </TouchableOpacity>
     </View>
   );
 }

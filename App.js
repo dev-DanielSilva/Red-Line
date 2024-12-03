@@ -4,8 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Login from './screens/login';
 import Principal from './screens/principal';
-import Detalhes from './screens/detalhes';
+import Pagamento from './screens/pagamento';
 import Cadastro from './screens/cadastro';
+import Método from './screens/metodo';
+import Cartão from './screens/cartao';
 
 const Stack = createStackNavigator();
 function MyStack() {
@@ -13,15 +15,17 @@ function MyStack() {
     <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen name="Login" component={Login}></Stack.Screen>
       <Stack.Screen name="Cadastro" component={Cadastro}></Stack.Screen>
+      <Stack.Screen name="Método" component={Método}></Stack.Screen>
       <Stack.Screen
         name="Principal"
         component={Principal}
         options={{
-          headerBackTitle: 'Principal',
-          headerBackTitleStyle: { fontSize: 16 },
+          headerShown: false,
         }}
       />
-      <Stack.Screen name="Detalhes" component={Detalhes}
+      <Stack.Screen name="Pagamento" component={Pagamento}
+      />
+      <Stack.Screen name="Cartão" component={Cartão}
       />
     </Stack.Navigator>
   );

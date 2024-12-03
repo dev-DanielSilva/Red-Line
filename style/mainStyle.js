@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
     marginBottom: 15, // Espaçamento entre os inputs
   },
   buttonStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#E16868', // Cor do botão
     borderRadius: 8,
     paddingVertical: 10,

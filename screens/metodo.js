@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     headerText: {
-        maxWidth: 230,
+        maxWidth: "100%",
         color: '#FFFFFF',
         fontSize: 25,
         fontWeight: 'bold',

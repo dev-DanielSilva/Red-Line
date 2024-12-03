@@ -13,8 +13,12 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator initialRouteName='Login'>
-      <Stack.Screen name="Login" component={Login}></Stack.Screen>
-      <Stack.Screen name="Cadastro" component={Cadastro}></Stack.Screen>
+      <Stack.Screen name="Login" component={Login} options={{
+        headerShown: false,
+      }}></Stack.Screen>
+      <Stack.Screen name="Cadastro" component={Cadastro} options={{
+        headerShown: false,
+      }}></Stack.Screen>
       <Stack.Screen name="Método" component={Método}></Stack.Screen>
       <Stack.Screen
         name="Principal"

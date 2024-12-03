@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   },
   headerServiços: {
     width: '90%',
-    height: 120,
+    height: 150,
     padding: 20,
     borderRadius: 20,
     marginVertical: 20,
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerText: {
-    maxWidth: 230,
+    maxWidth: '100%',
     color: '#FFFFFF',
     fontSize: 25,
     fontWeight: 'bold',
@@ -219,6 +219,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 10,
     paddingHorizontal: 20,
+    marginBottom: 10,
   },
   botaoTextoConfirmar: {
     color: '#fff',

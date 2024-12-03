@@ -20,8 +20,7 @@ export default function Cadastro({ navigation }) {
     };
 
     return (
-        <ScrollView>
-
+        <ScrollView style={{marginTop: 100}}>
             <View style={styles.container}>
                 {/* Logo */}
                 <Image
